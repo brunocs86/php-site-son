@@ -3,7 +3,7 @@
 include __DIR__.'/db.php';
 
 if(resolve('/admin/pages')){
-    $pages = $pages_all;
+    $pages = $pages_all();
     render('admin/pages/index', 'admin', ['pages' => $pages]);
 
 }elseif(resolve('/admin/pages/create')){
@@ -23,9 +23,9 @@ if(resolve('/admin/pages')){
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $pages_edit($params[1]);
         return header('location: /admin/pages/'.$params[1]);
-
     }
-    render('admin/pages/edit', 'admin');
+    $page = $page_one($params[1]);
+    render('admin/pages/edit', 'admin', ['page' => $page]);
 
 }elseif($params = resolve('/admin/pages/(\d+)/delete')) {
     $pages_delete($params[1]);

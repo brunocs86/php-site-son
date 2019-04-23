@@ -3,6 +3,6 @@
 include 'connection.php';
 
 $result = $conn->query('SELECT * FROM pages');
-$result->fetch_all(MYSQLI_ASSOC);
+$data = $result->fetch_all(MYSQLI_ASSOC);
 
-var_dump($result);
+var_dump($data);

@@ -1,23 +1,29 @@
 <h3 class="mb-5">Administração de páginas</h3>
 
-<?php var_dump($data); ?>
+<?php //var_dump($data); ?>
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>#</th>
+            <th>Id</th>
             <th>Título</th>
-            <th>Ações</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
+    
+    <?php foreach($data['pages'] as $page) :?>
+    
         <tr>
-            <td>1</td>
-            <td><a href="/admin/pages/1">Página Inicial</a> </td>
+            <td><?php echo $page['id']; ?></td>
+            <td><a href="/admin/pages/<?php echo $page['id']; ?>"><?php echo $page['title']; ?></a> </td>
             <td class="text-right">
-                <a href="/admin/pages/1" class="brn btn-primary btn-sm">Ver</a>
+                <a href="/admin/pages/<?php echo $page['id']; ?>" class="brn btn-primary btn-sm">Ver</a>
             </td>
         </tr>
+
+    <?php endforeach; ?>
+    
     </tbody>
 </table>
 
