@@ -4,7 +4,7 @@
 
     <div class="form-group">
         <label for="pagesTitle">Título</label>
-        <input name="title" id="pagesTitle" type="text" class="form-control" placeholder="informe o título" required>
+        <input name="title" id="pagesTitle" type="text" class="form-control" placeholder="informe o título">
     </div>
 
     <div class="form-group">

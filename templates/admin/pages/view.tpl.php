@@ -15,15 +15,14 @@
             <dt class="col-sm-4">Atualizado em</dt>
             <dd class="col-sm-8"><?php echo $data['page']['updated']; ?></dd>
         </dl>
+        <p>
+            <a href="/admin/pages/<?php echo $data['page']['id']; ?>/edit" class="btn btn-primary">Editar</a>
+            <a href="/admin/pages/<?php echo $data['page']['id']; ?>/delete" class="btn btn-danger confirm">Remover</a>
+        </p>
+
+        <br><a href="/admin/pages" class="btn btn-secondary mb-5">Voltar</a>
     </div>
     <div class="col bg-light">
         <p><?php echo $data['page']['body']; ?></p>
     </div>
 </div>
-
-<p>
-    <a href="/admin/pages/<?php echo $data['page']['id']; ?>/edit" class="btn btn-primary">Editar</a>
-    <a href="/admin/pages/<?php echo $data['page']['id']; ?>/delete" class="btn btn-danger confirm">Remover</a>
-</p>
-
-<br><a href="/admin/pages" class="btn btn-secondary mb-5">Voltar</a>
