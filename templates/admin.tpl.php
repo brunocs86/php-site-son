@@ -7,6 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -24,11 +27,15 @@
 <body class="d-flex flex-column">
 
 <div id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="" class="navbar-brand">AdminSoN</a>
-        <span class="navbar-text">
-            Painel Administrativo - SoN
+    <nav class="navbar navbar-dark bg-dark">
+        <span
+            <a href="" class="navbar-brand">AdminSoN</a>
+            <span class="navbar-text">
+                Painel Administrativo - SoN
+            </span>
         </span>
+
+        <a href="/admin/auth/logout" class="btn btn-danger"> <i class="fas fa-sign-out-alt"></i> Sair</a>
     </nav>
 </div>
 <div id="main">
@@ -39,10 +46,10 @@
                     <span class="nav-link text-white-50"><small>Menu</small></span>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/pages" class="nav-link <?php if (resolve('/admin/pages.*')): ?> active<?php endif;?>">Páginas</a>
+                    <a href="/admin/pages" class="nav-link <?php if (resolve('/admin/pages.*')): ?> active<?php endif;?>"> <i class="far fa-file-alt"></i> Páginas</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/users" class="nav-link <?php if (resolve('/admin/users.*')): ?> active<?php endif;?>">Usuários</a>
+                    <a href="/admin/users" class="nav-link <?php if (resolve('/admin/users.*')): ?> active<?php endif;?>"> <i class="far fa-user"></i> Usuários</a>
                 </li>
             </ul>
         </div>

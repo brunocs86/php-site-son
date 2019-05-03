@@ -20,7 +20,8 @@
     </div>
 
     <div class="form-group">
-        <input id="pagesBody" type="hidden" name="body" value="<?php echo $data['page']['body']; ?>">
+        //funcao htmlentities util para evitar erros na exibição do html
+        <input id="pagesBody" type="hidden" name="body" value="<?php echo htmlentities($data['page']['body']);?>">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
 
