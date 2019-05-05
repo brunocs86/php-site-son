@@ -31,4 +31,7 @@ if(resolve('/admin/pages')){
     $pages_delete($params[1]);
     return header('location: /admin/pages');
 
+}else{
+    http_response_code(404);
+    echo 'Erro 404: página não encontrada';
 }

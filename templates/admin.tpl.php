@@ -28,14 +28,15 @@
 
 <div id="header">
     <nav class="navbar navbar-dark bg-dark">
-        <span
-            <a href="" class="navbar-brand">AdminSoN</a>
+
+        <span>
+            <a href="/admin" class="navbar-brand">AdminSON</a>
             <span class="navbar-text">
-                Painel Administrativo - SoN
+                Painel Administrativo da School of Net
             </span>
         </span>
 
-        <a href="/admin/auth/logout" class="btn btn-danger"> <i class="fas fa-sign-out-alt"></i> Sair</a>
+        <a href="/admin/auth/logout" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Sair</a>
     </nav>
 </div>
 <div id="main">
@@ -44,6 +45,9 @@
             <ul id="main-menu" class="nav flex-column nav-pills bg-secondary text-white p-2">
                 <li class="nav-item">
                     <span class="nav-link text-white-50"><small>Menu</small></span>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin" class="nav-link <?php if (resolve('/admin')): ?> active<?php endif;?>"> <i class="far fa-arrow-alt-circle-right"></i> Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="/admin/pages" class="nav-link <?php if (resolve('/admin/pages.*')): ?> active<?php endif;?>"> <i class="far fa-file-alt"></i> Páginas</a>
