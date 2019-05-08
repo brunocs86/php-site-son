@@ -25,12 +25,16 @@
 
 <div id="header">
     <nav class="navbar navbar-dark bg-dark">
+
         <span>
             <a href="/admin" class="navbar-brand">AdminSON</a>
             <span class="navbar-text">
                 Painel Administrativo da School of Net
             </span>
         </span>
+
+        <a href="/" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Site</a>
+
     </nav>
 </div>
 <div id="main">

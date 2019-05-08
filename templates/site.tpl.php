@@ -19,9 +19,14 @@
 
 <ul id="nav">
     <?php foreach ($data['pages'] as $item) : ?>
-    <li><a href="/<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a></li>
+        <li><a href="/<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a></li>
     <?php endforeach; ?>
-    <li><a href="/contato">Contato</a></li>
+    <li><a href="/contato">
+            Contato</a>
+    </li>
+    <li>
+        <a href="/admin/auth/login" class="bg bg-primary"> <strong> Admin</strong></a>
+    </li>
 </ul>
 
 <main id="content">
